@@ -52,11 +52,11 @@
             this.btnNewGame.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNewGame.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnNewGame.Location = new System.Drawing.Point(441, 602);
+            this.btnNewGame.Location = new System.Drawing.Point(220, 632);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(108, 40);
+            this.btnNewGame.Size = new System.Drawing.Size(205, 40);
             this.btnNewGame.TabIndex = 5;
-            this.btnNewGame.Text = "Restart";
+            this.btnNewGame.Text = "В главное меню";
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             this.btnNewGame.MouseEnter += new System.EventHandler(this.BtnRotate_MouseEnter);
@@ -70,9 +70,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(466, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 30);
+            this.label2.Size = new System.Drawing.Size(87, 30);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Lives:";
+            this.label2.Text = "Жизни:";
             // 
             // timerRotate
             // 
@@ -105,11 +105,10 @@
             this.btnRotate.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRotate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnRotate.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnRotate.Location = new System.Drawing.Point(60, 602);
+            this.btnRotate.Location = new System.Drawing.Point(271, 293);
             this.btnRotate.Name = "btnRotate";
-            this.btnRotate.Size = new System.Drawing.Size(108, 40);
+            this.btnRotate.Size = new System.Drawing.Size(100, 100);
             this.btnRotate.TabIndex = 10;
-            this.btnRotate.Text = "Rotate";
             this.btnRotate.UseVisualStyleBackColor = true;
             this.btnRotate.Click += new System.EventHandler(this.btnRotate_Click);
             this.btnRotate.MouseEnter += new System.EventHandler(this.BtnRotate_MouseEnter);
@@ -123,9 +122,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 30);
+            this.label1.Size = new System.Drawing.Size(234, 30);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Correct Answers:";
+            this.label1.Text = "Правильные ответы:";
             // 
             // label4
             // 
@@ -133,11 +132,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(12, 39);
+            this.label4.Location = new System.Drawing.Point(241, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 30);
+            this.label4.Size = new System.Drawing.Size(25, 30);
             this.label4.TabIndex = 12;
-            this.label4.Text = "label4";
+            this.label4.Text = "?";
             // 
             // lives1
             // 
@@ -177,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TriviaQuiz.Properties.Resources.Site_Background;
-            this.ClientSize = new System.Drawing.Size(606, 684);
+            this.ClientSize = new System.Drawing.Size(614, 686);
             this.Controls.Add(this.lives2);
             this.Controls.Add(this.lives3);
             this.Controls.Add(this.lives1);

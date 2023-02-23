@@ -33,6 +33,7 @@
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnPopCulture = new System.Windows.Forms.Button();
             this.btnSport = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnGeography
@@ -40,11 +41,11 @@
             this.btnGeography.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGeography.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGeography.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnGeography.Location = new System.Drawing.Point(12, 31);
+            this.btnGeography.Location = new System.Drawing.Point(7, 74);
             this.btnGeography.Name = "btnGeography";
             this.btnGeography.Size = new System.Drawing.Size(233, 72);
             this.btnGeography.TabIndex = 0;
-            this.btnGeography.Text = "Geography";
+            this.btnGeography.Text = "География";
             this.btnGeography.UseVisualStyleBackColor = true;
             this.btnGeography.Click += new System.EventHandler(this.BtnGeography_Click);
             this.btnGeography.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
@@ -55,11 +56,11 @@
             this.btnScience.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnScience.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnScience.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnScience.Location = new System.Drawing.Point(270, 31);
+            this.btnScience.Location = new System.Drawing.Point(265, 74);
             this.btnScience.Name = "btnScience";
             this.btnScience.Size = new System.Drawing.Size(233, 72);
             this.btnScience.TabIndex = 1;
-            this.btnScience.Text = "Science";
+            this.btnScience.Text = "Наука";
             this.btnScience.UseVisualStyleBackColor = true;
             this.btnScience.Click += new System.EventHandler(this.BtnScience_Click);
             this.btnScience.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
@@ -70,7 +71,7 @@
             this.btnHistory.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnHistory.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnHistory.Location = new System.Drawing.Point(394, 152);
+            this.btnHistory.Location = new System.Drawing.Point(389, 169);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(233, 72);
             this.btnHistory.TabIndex = 2;
@@ -85,11 +86,11 @@
             this.btnPopCulture.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPopCulture.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPopCulture.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnPopCulture.Location = new System.Drawing.Point(90, 152);
+            this.btnPopCulture.Location = new System.Drawing.Point(135, 169);
             this.btnPopCulture.Name = "btnPopCulture";
             this.btnPopCulture.Size = new System.Drawing.Size(233, 72);
             this.btnPopCulture.TabIndex = 3;
-            this.btnPopCulture.Text = "Pop Culture";
+            this.btnPopCulture.Text = "Поп-культура";
             this.btnPopCulture.UseVisualStyleBackColor = true;
             this.btnPopCulture.Click += new System.EventHandler(this.BtnPopCulture_Click);
             this.btnPopCulture.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
@@ -100,15 +101,27 @@
             this.btnSport.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSport.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSport.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnSport.Location = new System.Drawing.Point(523, 31);
+            this.btnSport.Location = new System.Drawing.Point(518, 74);
             this.btnSport.Name = "btnSport";
             this.btnSport.Size = new System.Drawing.Size(233, 72);
             this.btnSport.TabIndex = 4;
-            this.btnSport.Text = "Sport";
+            this.btnSport.Text = "Спорт";
             this.btnSport.UseVisualStyleBackColor = true;
             this.btnSport.Click += new System.EventHandler(this.BtnSport_Click);
             this.btnSport.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
             this.btnSport.MouseLeave += new System.EventHandler(this.BtnGeography_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(231, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 48);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "ВЫБЕРЕТЕ ТЕМУ";
             // 
             // Joker
             // 
@@ -117,6 +130,7 @@
             this.BackgroundImage = global::TriviaQuiz.Properties.Resources.Site_Background;
             this.ClientSize = new System.Drawing.Size(763, 253);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSport);
             this.Controls.Add(this.btnPopCulture);
             this.Controls.Add(this.btnHistory);
@@ -125,8 +139,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Joker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Joker";
+            this.Text = "Джокер";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,5 +152,6 @@
         private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnPopCulture;
         private System.Windows.Forms.Button btnSport;
+        private System.Windows.Forms.Label label1;
     }
 }

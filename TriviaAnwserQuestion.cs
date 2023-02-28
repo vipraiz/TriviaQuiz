@@ -72,27 +72,31 @@ namespace TriviaQuiz
             if (TriviaNewGame.CurrentCategory == "Geography")
             {
                 this.BackgroundImage = Resources.geography;
-                Text = TriviaNewGame.CurrentCategory;
             }
             else if (TriviaNewGame.CurrentCategory == "Sports")
             {
                 this.BackgroundImage = Resources.sport;
-                Text = TriviaNewGame.CurrentCategory;
             }
-            else if (TriviaNewGame.CurrentCategory == "Science")
+            else if (TriviaNewGame.CurrentCategory == "NSTU")
             {
-                this.BackgroundImage = Resources.science;
-                Text = TriviaNewGame.CurrentCategory;
+                this.BackgroundImage = Resources.NSTU;
             }
             else if (TriviaNewGame.CurrentCategory == "PopCulture")
             {
                 this.BackgroundImage = Resources.cultr;
-                Text = TriviaNewGame.CurrentCategory;
             }
             else if (TriviaNewGame.CurrentCategory == "ComputerScience")
             {
                 this.BackgroundImage = Resources.iStock_636447976;
-                Text = TriviaNewGame.CurrentCategory;
+            }
+            //Text = TriviaNewGame.CurrentCategory;
+            switch (TriviaNewGame.CurrentCategory)
+            {
+                case "PopCulture": Text = "Поп-культура"; break;
+                case "NSTU": Text = "НГТУ"; break;
+                case "Geography": Text = "География"; break;
+                case "Sports": Text = "Спорт"; break;
+                case "ComputerScience": Text = "Computer Science"; break;
             }
         }
 

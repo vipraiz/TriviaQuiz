@@ -42,9 +42,10 @@
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblMessage.Location = new System.Drawing.Point(12, 74);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(514, 113);
+            this.lblMessage.Size = new System.Drawing.Size(514, 57);
             this.lblMessage.TabIndex = 5;
             this.lblMessage.Text = "?";
+            this.lblMessage.Click += new System.EventHandler(this.lblMessage_Click);
             // 
             // label1
             // 
@@ -63,7 +64,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::TriviaQuiz.Properties.Resources.J4GYui_home_round_button_icon_png;
-            this.pictureBox1.Location = new System.Drawing.Point(243, 196);
+            this.pictureBox1.Location = new System.Drawing.Point(232, 122);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
@@ -92,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TriviaQuiz.Properties.Resources.Site_Background;
-            this.ClientSize = new System.Drawing.Size(572, 305);
+            this.ClientSize = new System.Drawing.Size(572, 231);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.label1);

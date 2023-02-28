@@ -24,17 +24,17 @@ namespace TriviaQuiz
         }
         private void BtnGeography_Click(object sender, EventArgs e)
         {
-            SetCategory(btnGeography.Text);
+            SetCategory("Geography");
         }
 
-        private void BtnScience_Click(object sender, EventArgs e)
+        private void btnNSTU_Click(object sender, EventArgs e)
         {
-            SetCategory(btnScience.Text);
+            SetCategory("NSTU");
         }
 
         private void BtnSport_Click(object sender, EventArgs e)
         {
-            SetCategory(btnSport.Text+ "s");
+            SetCategory("Sports");
         }
 
         private void BtnPopCulture_Click(object sender, EventArgs e)

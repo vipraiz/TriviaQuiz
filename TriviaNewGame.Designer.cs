@@ -34,23 +34,25 @@
             this.timerRotate = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnRotate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lives1 = new System.Windows.Forms.PictureBox();
             this.lives3 = new System.Windows.Forms.PictureBox();
             this.lives2 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnRotate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRotate)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewGame
             // 
             this.btnNewGame.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNewGame.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNewGame.Image = global::TriviaQuiz.Properties.Resources.board;
             this.btnNewGame.Location = new System.Drawing.Point(220, 632);
             this.btnNewGame.Name = "btnNewGame";
@@ -100,20 +102,6 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // btnRotate
-            // 
-            this.btnRotate.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRotate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRotate.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnRotate.Location = new System.Drawing.Point(271, 293);
-            this.btnRotate.Name = "btnRotate";
-            this.btnRotate.Size = new System.Drawing.Size(100, 100);
-            this.btnRotate.TabIndex = 10;
-            this.btnRotate.UseVisualStyleBackColor = true;
-            this.btnRotate.Click += new System.EventHandler(this.btnRotate_Click);
-            this.btnRotate.MouseEnter += new System.EventHandler(this.BtnRotate_MouseEnter);
-            this.btnRotate.MouseLeave += new System.EventHandler(this.BtnRotate_MouseLeave);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -148,6 +136,7 @@
             this.lives1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lives1.TabIndex = 13;
             this.lives1.TabStop = false;
+            this.lives1.Click += new System.EventHandler(this.lives1_Click);
             // 
             // lives3
             // 
@@ -159,6 +148,7 @@
             this.lives3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lives3.TabIndex = 14;
             this.lives3.TabStop = false;
+            this.lives3.Click += new System.EventHandler(this.lives3_Click);
             // 
             // lives2
             // 
@@ -170,6 +160,21 @@
             this.lives2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.lives2.TabIndex = 15;
             this.lives2.TabStop = false;
+            this.lives2.Click += new System.EventHandler(this.lives2_Click);
+            // 
+            // btnRotate
+            // 
+            this.btnRotate.BackColor = System.Drawing.Color.Transparent;
+            this.btnRotate.BackgroundImage = global::TriviaQuiz.Properties.Resources.rotate1;
+            this.btnRotate.Image = global::TriviaQuiz.Properties.Resources.rotate1;
+            this.btnRotate.Location = new System.Drawing.Point(38, 557);
+            this.btnRotate.Name = "btnRotate";
+            this.btnRotate.Size = new System.Drawing.Size(90, 90);
+            this.btnRotate.TabIndex = 17;
+            this.btnRotate.TabStop = false;
+            this.btnRotate.Click += new System.EventHandler(this.btnRotate_Click);
+            this.btnRotate.MouseEnter += new System.EventHandler(this.BtnRotate_MouseEnter);
+            this.btnRotate.MouseLeave += new System.EventHandler(this.BtnRotate_MouseLeave);
             // 
             // TriviaNewGame
             // 
@@ -177,12 +182,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TriviaQuiz.Properties.Resources.Site_Background;
             this.ClientSize = new System.Drawing.Size(614, 686);
+            this.Controls.Add(this.btnRotate);
             this.Controls.Add(this.lives2);
             this.Controls.Add(this.lives3);
             this.Controls.Add(this.lives1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRotate);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -191,11 +196,13 @@
             this.Name = "TriviaNewGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trivia Quiz";
+            this.Load += new System.EventHandler(this.TriviaNewGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRotate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,12 +214,13 @@
         private System.Windows.Forms.Timer timerRotate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnRotate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox lives1;
         private System.Windows.Forms.PictureBox lives3;
         private System.Windows.Forms.PictureBox lives2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox btnRotate;
     }
 }
 

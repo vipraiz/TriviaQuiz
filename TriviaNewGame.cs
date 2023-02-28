@@ -20,12 +20,12 @@ namespace TriviaQuiz
     {
         private List<Question> GeographyQuestions;
         private List<Question> SportQuestions;
-        private List<Question> ScienceQuestions;
+        private List<Question> NSTUQuestions;
         private List<Question> PopCultureQuestions;
         private List<Question> ComputerScienceQuestions;
         private int GeograpyLeft;
         private int SportsLeft;
-        private int ScienceLeft;
+        private int NSTULeft;
         private int PopCultureLeft;
         private int ComputerScienceLeft;
         public static Question Current;
@@ -71,9 +71,9 @@ namespace TriviaQuiz
                 {
                     SportQuestions.Add(tmp);
                 }
-                else if (tema.Equals("Science"))
+                else if (tema.Equals("NSTU"))
                 {
-                    ScienceQuestions.Add(tmp);
+                    NSTUQuestions.Add(tmp);
                 }
                 else if (tema.Equals("PopCulture"))
                 {
@@ -91,7 +91,7 @@ namespace TriviaQuiz
         {
             angle = 24;
             GeographyQuestions = new List<Question>();
-            ScienceQuestions = new List<Question>();
+            NSTUQuestions = new List<Question>();
             SportQuestions = new List<Question>();
             PopCultureQuestions = new List<Question>();
             ComputerScienceQuestions = new List<Question>();
@@ -99,13 +99,13 @@ namespace TriviaQuiz
             Points = 0;
             GeograpyLeft = 30;
             SportsLeft = 30;
-            ScienceLeft = 30;
+            NSTULeft = 30;
             PopCultureLeft = 30;
             ComputerScienceLeft = 30;
             random = new Random();
-            FillQuestions(Resources.Geography_Questions, Resources.Geography_Anwsers, "Geography");
+            FillQuestions(Resources.GeographyQuestions, Resources.GeographyAnwsers, "Geography");
             FillQuestions(Resources.PopCultureQuestions, Resources.PopCultureAnswers, "PopCulture");
-            FillQuestions(Resources.Science_Questions, Resources.Science_Anwsers, "Science");
+            FillQuestions(Resources.NSTUQuestions, Resources.NSTUAnwsers, "NSTU");
             FillQuestions(Resources.SportsQuestions, Resources.SportsAnwsers, "Sports");
             FillQuestions(Resources.ComputerScienceQuestions, Resources.ComputerScienceAnswers, "ComputerScience");
             timerRotate.Enabled = false;
@@ -121,11 +121,11 @@ namespace TriviaQuiz
                 GeograpyLeft--;
             }
 
-            else if (CurrentCategory == "Science")
+            else if (CurrentCategory == "NSTU")
             {
-                Current = ScienceQuestions[random.Next(ScienceLeft)];
-                ScienceQuestions.Remove(Current);
-                ScienceLeft--;
+                Current = NSTUQuestions[random.Next(NSTULeft)];
+                NSTUQuestions.Remove(Current);
+                NSTULeft--;
             }
 
             else if (CurrentCategory == "Sports")
@@ -246,6 +246,7 @@ namespace TriviaQuiz
             {
                 circlePosition %= 360;
 
+
                 if (circlePosition >= 0 && circlePosition < 60)
                 {
                     CurrentCategory = "PopCulture";
@@ -255,14 +256,14 @@ namespace TriviaQuiz
 
                 else if (circlePosition >= 60 && circlePosition < 120)
                 {
-                    CurrentCategory = "Geography";
+                    CurrentCategory = "NSTU";
                     GetQuestion();
                     resetWheel();
                 }
 
                 else if (circlePosition >= 120 && circlePosition < 180)
                 {
-                    CurrentCategory = "Science";
+                    CurrentCategory = "Geography";
                     GetQuestion();
                     resetWheel();
                 }
@@ -302,6 +303,37 @@ namespace TriviaQuiz
             pictureBox1.Image = rotatedImage;
             angle = 24;
             circlePosition = 0;
+        }
+
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TriviaNewGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lives1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lives2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lives3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void BtnRotate_MouseEnter(object sender, EventArgs e)

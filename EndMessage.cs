@@ -20,10 +20,10 @@ namespace TriviaQuiz
             Icon = Icon.FromHandle(Resources.trivia_quiz_logo.GetHicon());
             Points = TriviaNewGame.Points;
             lblPoints.Text = Points.ToString();
-            if (Points < 30)
-                lblMessage.Text = "So close! You have almost received the status of Albert Einstein. Test your wisdom again.";
-            else
-                lblMessage.Text = "Congratulations! You have received the status of Albert Einstein. If you want test your wisdom again.";
+            if (Points == 0) lblMessage.Text = "Ты ведь специльно, да?";
+            else if (Points < 10) lblMessage.Text = "Неплохой результат! Но можно лучше.";
+            else if (Points < 20) lblMessage.Text = "Отличный результат!";
+            else lblMessage.Text = "Поздравляем! Ты настоящий эрудит!";
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace TriviaQuiz
         }
 
         private void lblPoints_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMessage_Click(object sender, EventArgs e)
         {
 
         }

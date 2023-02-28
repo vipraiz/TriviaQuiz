@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnGeography = new System.Windows.Forms.Button();
-            this.btnScience = new System.Windows.Forms.Button();
+            this.btnNSTU = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.btnPopCulture = new System.Windows.Forms.Button();
             this.btnSport = new System.Windows.Forms.Button();
@@ -51,20 +51,20 @@
             this.btnGeography.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
             this.btnGeography.MouseLeave += new System.EventHandler(this.BtnGeography_MouseLeave);
             // 
-            // btnScience
+            // btnNSTU
             // 
-            this.btnScience.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScience.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnScience.Image = global::TriviaQuiz.Properties.Resources.board;
-            this.btnScience.Location = new System.Drawing.Point(265, 74);
-            this.btnScience.Name = "btnScience";
-            this.btnScience.Size = new System.Drawing.Size(233, 72);
-            this.btnScience.TabIndex = 1;
-            this.btnScience.Text = "Наука";
-            this.btnScience.UseVisualStyleBackColor = true;
-            this.btnScience.Click += new System.EventHandler(this.BtnScience_Click);
-            this.btnScience.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
-            this.btnScience.MouseLeave += new System.EventHandler(this.BtnGeography_MouseLeave);
+            this.btnNSTU.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNSTU.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNSTU.Image = global::TriviaQuiz.Properties.Resources.board;
+            this.btnNSTU.Location = new System.Drawing.Point(265, 74);
+            this.btnNSTU.Name = "btnNSTU";
+            this.btnNSTU.Size = new System.Drawing.Size(233, 72);
+            this.btnNSTU.TabIndex = 1;
+            this.btnNSTU.Text = "НГТУ";
+            this.btnNSTU.UseVisualStyleBackColor = true;
+            this.btnNSTU.Click += new System.EventHandler(this.btnNSTU_Click);
+            this.btnNSTU.MouseEnter += new System.EventHandler(this.BtnGeography_MouseEnter);
+            this.btnNSTU.MouseLeave += new System.EventHandler(this.BtnGeography_MouseLeave);
             // 
             // btnHistory
             // 
@@ -134,7 +134,7 @@
             this.Controls.Add(this.btnSport);
             this.Controls.Add(this.btnPopCulture);
             this.Controls.Add(this.btnHistory);
-            this.Controls.Add(this.btnScience);
+            this.Controls.Add(this.btnNSTU);
             this.Controls.Add(this.btnGeography);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Joker";
@@ -148,7 +148,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnGeography;
-        private System.Windows.Forms.Button btnScience;
+        private System.Windows.Forms.Button btnNSTU;
         private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnPopCulture;
         private System.Windows.Forms.Button btnSport;

@@ -43,6 +43,10 @@ namespace TriviaQuiz
             Icon = Icon.FromHandle(Resources.trivia_quiz_logo.GetHicon());
             InitializeComponent();
             NewGame();
+            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+            gp.AddEllipse(0, 0, btnRotate.Width - 1, btnRotate.Height - 1);
+            Region rg = new Region(gp);
+            btnRotate.Region = rg;
         }
 
         public void FillQuestions(string QuestionsLocation, string AnswerLocation, string tema)

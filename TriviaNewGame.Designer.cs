@@ -41,6 +41,7 @@
             this.lives2 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnRotate = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lives1)).BeginInit();
@@ -167,7 +168,7 @@
             this.btnRotate.BackColor = System.Drawing.Color.Transparent;
             this.btnRotate.BackgroundImage = global::TriviaQuiz.Properties.Resources.rotate1;
             this.btnRotate.Image = global::TriviaQuiz.Properties.Resources.rotate1;
-            this.btnRotate.Location = new System.Drawing.Point(38, 557);
+            this.btnRotate.Location = new System.Drawing.Point(274, 298);
             this.btnRotate.Name = "btnRotate";
             this.btnRotate.Size = new System.Drawing.Size(90, 90);
             this.btnRotate.TabIndex = 17;
@@ -221,6 +222,7 @@
         private System.Windows.Forms.PictureBox lives2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox btnRotate;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
 

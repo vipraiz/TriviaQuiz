@@ -10,8 +10,10 @@
 
 namespace TriviaQuiz.Properties {
     using System;
-    
-    
+    using System.IO;
+    using System.Text;
+
+
     /// <summary>
     ///   Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
     /// </summary>
@@ -123,7 +125,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string ComputerScienceAnswers {
             get {
-                return ResourceManager.GetString("ComputerScienceAnswers", resourceCulture);
+                //return ResourceManager.GetString("ComputerScienceAnswers", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\ComputerScienceAnswers.txt", Encoding.UTF8);
             }
         }
         
@@ -138,7 +141,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string ComputerScienceQuestions {
             get {
-                return ResourceManager.GetString("ComputerScienceQuestions", resourceCulture);
+                //return ResourceManager.GetString("ComputerScienceQuestions", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\ComputerScienceQuestions.txt", Encoding.UTF8);
             }
         }
         
@@ -219,7 +223,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string GeographyAnwsers {
             get {
-                return ResourceManager.GetString("GeographyAnwsers", resourceCulture);
+                //return ResourceManager.GetString("GeographyAnwsers", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\GeographyAnwsers.txt", Encoding.UTF8);
             }
         }
         
@@ -239,7 +244,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string GeographyQuestions {
             get {
-                return ResourceManager.GetString("GeographyQuestions", resourceCulture);
+                //return ResourceManager.GetString("GeographyQuestions", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\GeographyQuestions.txt", Encoding.UTF8);
             }
         }
         
@@ -341,7 +347,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string NSTUAnwsers {
             get {
-                return ResourceManager.GetString("NSTUAnwsers", resourceCulture);
+               // return ResourceManager.GetString("NSTUAnwsers", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\NSTUAnwsers.txt", Encoding.UTF8);
             }
         }
         
@@ -361,7 +368,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string NSTUQuestions {
             get {
-                return ResourceManager.GetString("NSTUQuestions", resourceCulture);
+               // return ResourceManager.GetString("NSTUQuestions", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\NSTUQuestions.txt", Encoding.UTF8);
             }
         }
         
@@ -412,7 +420,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string PopCultureAnswers {
             get {
-                return ResourceManager.GetString("PopCultureAnswers", resourceCulture);
+                //return ResourceManager.GetString("PopCultureAnswers", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\PopCultureAnswers.txt", Encoding.UTF8);
             }
         }
         
@@ -429,7 +438,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string PopCultureQuestions {
             get {
-                return ResourceManager.GetString("PopCultureQuestions", resourceCulture);
+                //return ResourceManager.GetString("PopCultureQuestions", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\PopCultureQuestions.txt", Encoding.UTF8);
             }
         }
         
@@ -537,7 +547,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string SportsAnwsers {
             get {
-                return ResourceManager.GetString("SportsAnwsers", resourceCulture);
+               // return ResourceManager.GetString("SportsAnwsers", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\SportsAnwsers.txt", Encoding.UTF8);
             }
         }
         
@@ -555,7 +566,8 @@ namespace TriviaQuiz.Properties {
         /// </summary>
         internal static string SportsQuestions {
             get {
-                return ResourceManager.GetString("SportsQuestions", resourceCulture);
+               // return ResourceManager.GetString("SportsQuestions", resourceCulture);
+                return File.ReadAllText(@"..\..\Resources\SportsQuestions.txt", Encoding.UTF8);
             }
         }
         

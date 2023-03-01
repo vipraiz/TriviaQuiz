@@ -101,11 +101,11 @@ namespace TriviaQuiz
             ComputerScienceQuestions = new List<Question>();
             Lives = 3;
             Points = 0;
-            GeograpyLeft = 30;
-            SportsLeft = 30;
-            NSTULeft = 30;
-            PopCultureLeft = 30;
-            ComputerScienceLeft = 30;
+            GeograpyLeft = 10;
+            SportsLeft = 10;
+            NSTULeft = 5;
+            PopCultureLeft = 10;
+            ComputerScienceLeft = 10;
             random = new Random();
             FillQuestions(Resources.GeographyQuestions, Resources.GeographyAnwsers, "Geography");
             FillQuestions(Resources.PopCultureQuestions, Resources.PopCultureAnswers, "PopCulture");

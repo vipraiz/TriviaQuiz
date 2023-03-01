@@ -130,18 +130,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Geography-Anwsers.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Geography-Questions.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Science-Questions.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Science-Anwsers.txt" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\heart-icon-y1k.webp" />
     <None Include="Resources\SportsQuestions.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Arrow-right.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\science.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sport.jpg" />
@@ -184,9 +170,6 @@
     <None Include="Resources\board.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Webp.net-resizeimage_FINAL.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ComputerScienceAnswers.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -196,19 +179,19 @@
     <None Include="Resources\iStock-636447976.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\60degColorWheel_IconsFixed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\60degColorWheel_IconsFixed_resized.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\WheelFINAL.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rotate.bmp" />
+    <None Include="Resources\rotate.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rotate.png" />
+    <Content Include="Resources\800px_COLOURBOX17743925.jpg" />
+    <Content Include="Resources\GeographyAnwsers.txt" />
+    <Content Include="Resources\GeographyQuestions.txt" />
+    <Content Include="Resources\globe-512.png" />
+    <Content Include="Resources\NSTU.jpg" />
+    <Content Include="Resources\NSTUAnwsers.txt" />
+    <Content Include="Resources\NSTUQuestions.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
